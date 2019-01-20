@@ -1,0 +1,64 @@
+/* BASIC SETTING */
+
+body {
+    background-color: #ccc;
+    color: white;
+}
+
+.wrapper {
+    background-color: green;
+}
+
+/* Что бы выровнить по горизонтали текст внутри блока или любой другой 
+строчный элемент можно воспользоваться свойством text-align: center; */
+
+.wrapper {
+    text-align: center;
+}
+
+/* Что бы выровнить блочный элемент по центру родителя, нужно ему задать 
+фиксированную ширину и использовать свойство margin */
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* выравним блок с классом .block в пределах блока с классом .wrapper,
+для чего восполльзуемся позиционирование */
+
+.wrapper {
+    height: 200px;
+    position: relative;
+}
+
+.block {
+    position: absolute;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+    /* margin-left: -25px; */
+    transform: translate(-50%); /* альтернатива margin-left */
+    background-color: blue;
+}
+
+/* выравним блок с классом .block-2 в пределах блока с классом .wrapper
+с использование flexbox */
+
+.block-2 {
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+    background-color: crimson;
+}
+
+/* для этого нужно задать несколько новых свойст для блока с классом .wrapper */
+
+.wrapper-2 {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: gold;
+}
+
